@@ -28,12 +28,4 @@ class Tag extends Model implements TagContract
     {
         return $this->belongsTo(UserProxy::modelClass());
     }
-
-    /**
-     * Accessor to strip tags from the name attribute.
-     */
-    public function getNameAttribute($value): string
-    {
-        return strip_tags($value);
-    }
 }
