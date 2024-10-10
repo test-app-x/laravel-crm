@@ -9,14 +9,17 @@
     detach-endpoint="{{ $detachEndpoint }}"
     :added-tags='@json($addedTags)'
 >
-    <template #tag-before>
-        {{ $tagBefore ?? '' }}
-    </template>
+    @isset($tagBefore)
+        <template #tag-before>
+            {{ $tagBefore ?? '' }}
+        </template>
+    @endisset
 
-    <template #tag-after>
-        {{ $tagAfter ?? '' }}
-    </template>
-
+    @isset($tagAfter)
+        <template #tag-after>
+            {{ $tagAfter ?? '' }}
+        </template>
+    @endisset
     <x-admin::shimmer.tags count="3" />
 </v-tags>
 
