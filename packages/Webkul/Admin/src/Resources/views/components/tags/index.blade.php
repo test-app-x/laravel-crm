@@ -19,7 +19,7 @@
         <template #tag-after>
             {{ $tagAfter ?? '' }}
         </template>
-    @endisset'
+    @endisset
 
     <x-admin::shimmer.tags count="3" />
 </v-tags>
