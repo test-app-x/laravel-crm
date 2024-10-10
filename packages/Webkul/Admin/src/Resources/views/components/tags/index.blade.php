@@ -23,7 +23,7 @@
                     'color': backgroundColors.find(color => color.background === tag.color)?.text
                 }"
                 v-for="(tag, index) in tags"
-                v-text="tag.name"
+                v-html="tag.name"
             >
             </span>
 
