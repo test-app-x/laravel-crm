@@ -44,7 +44,10 @@
             <slot name="tag-after"></slot>
 
             <!-- Add Button -->
-            <x-admin::dropdown ::close-on-click="false" position="bottom-{{ in_array(app()->getLocale(), ['fa', 'ar']) ? 'right' : 'left' }}">
+            <x-admin::dropdown 
+                ::close-on-click="false"
+                position="bottom-{{ in_array(app()->getLocale(), ['fa', 'ar']) ? 'right' : 'left' }}"
+            >
                 <x-slot:toggle>
                     <button class="icon-settings-tag rounded-md p-1 text-xl transition-all hover:bg-gray-200 dark:hover:bg-gray-950"></button>
                 </x-slot>
